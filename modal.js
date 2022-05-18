@@ -11,8 +11,9 @@ export class Modal {
     html = ``;
 
     // custom options
-    modalBackgroundClass = '';
+    modalClass = '';
     modalContentsClass = '';
+    modalBackgroundClass = '';
     transitionSeconds = '0.3';
     backgroundClickExit = true;
 
@@ -73,6 +74,8 @@ export class Modal {
                     position: fixed;
                     top: 50%;
                     left: 50%;
+                    width: 200px;
+                    height: 80px;
                     transform: translate(-50%, -50%);
                     box-sizing: border-box;
                     background: #ffffff;
@@ -92,7 +95,7 @@ export class Modal {
         // add modal
         let modalElement = document.createElement('div');
         modalElement.setAttribute('id', this.modalId);
-        modalElement.className = 'frontleModal';
+        modalElement.className = `frontleModal ${this.modalClass}`;
         modalElement.innerHTML = html;
         modalElement.style.zIndex = String(zIndex);
         modalElement.style.opacity = '0';
