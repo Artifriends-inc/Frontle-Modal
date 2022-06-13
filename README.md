@@ -42,7 +42,7 @@ modal.open();
 Installation is done using the
 
 ```shell
-$ frontle install frontle-modal
+$ frontle install-original frontle-modal
 ```
 
 
@@ -68,8 +68,8 @@ Sets the class of a modal
 
 ```javascript
 modal.modalClass = 'classname';
-modal.modalContentsClass = 'classname'
-modal.modalBackgroundClass = 'classname'
+modal.modalContentsClass = 'classname';
+modal.modalBackgroundClass = 'classname';
 ```
 
 

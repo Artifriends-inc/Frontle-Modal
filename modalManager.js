@@ -1,6 +1,6 @@
 'use strict';
 
-import {zIndexManager} from "../zIndexManager/zIndexManager.js";
+import {zIndexManager} from "../zindex-maximumvalue-manager/zIndexManager.js";
 
 export class ModalManager {
     static instance = null;
