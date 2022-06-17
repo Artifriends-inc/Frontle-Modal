@@ -51,7 +51,7 @@ $ frontle install-original frontle-modal
 
 #### new modal(handler, html)
 
-Creates a modal object
+Create a modal object
 
 ```javascript
 let modal = new Modal(this.handler, `
@@ -62,9 +62,9 @@ let modal = new Modal(this.handler, `
 
 
 
-#### modal.modalClass
+#### modal.CSSClass
 
-Sets the class of a modal
+Set the css class of a modal
 
 ```javascript
 modal.modalClass = 'classname';

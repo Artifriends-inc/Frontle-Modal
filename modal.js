@@ -68,7 +68,6 @@ export class Modal {
                     top: 0;
                     left: 0;
                     background: rgba(0, 0, 0, 0.4);
-                    z-index: ${zIndex}
                 }
                 .frontleModalContents{
                     position: fixed;
@@ -80,7 +79,6 @@ export class Modal {
                     box-sizing: border-box;
                     background: #ffffff;
                     overflow: hidden;
-                    z-index: ${zIndex + 1}
                 }
             `;
             document.head.insertBefore(modalCSSElement, document.head.childNodes[0]);
@@ -88,8 +86,8 @@ export class Modal {
 
         // set html
         let html = `
-            <div id="frontleModalBackground_${this.modalId}" class="frontleModalBackground ${this.modalBackgroundClass}"></div>
-            <div id="frontleModalContents_${this.modalId}" class="frontleModalContents ${this.modalContentsClass}">${this.html}</div>
+            <div id="frontleModalBackground_${this.modalId}" class="frontleModalBackground ${this.modalBackgroundClass}" style="z-index: ${zIndex}"></div>
+            <div id="frontleModalContents_${this.modalId}" class="frontleModalContents ${this.modalContentsClass}" style="z-index: ${zIndex + 1}">${this.html}</div>
         `;
 
         // add modal
