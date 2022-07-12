@@ -4,7 +4,9 @@ import {zIndexManager} from "../zindex-maximumvalue-manager/zIndexManager.js";
 
 export class ModalManager {
     static instance = null;
-    static getInstance(handler) {
+    static getInstance() {
+        const handler = document.querySelector('.rootPage').id;
+
         if (this.instance === null) {
             this.instance = new this();
             this.instance.init(handler);
@@ -25,7 +27,7 @@ export class ModalManager {
     constructor() {}
 
     init(handler) {
-        this.zIndexManager = zIndexManager.getInstance(handler);
+        this.zIndexManager = zIndexManager.getInstance();
         this.handler = handler;
         this.modalCount = 0;
         this.openedStatus = {};

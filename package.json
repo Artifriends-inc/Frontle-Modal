@@ -1,7 +1,7 @@
 {
   "name": "frontle-modal",
-  "version": "1.0.3",
-  "description": "Frontle Modal",
+  "version": "1.0.4",
+  "description": "Modal UI in Frontle",
   "keywords": [
     "frontle",
     "frontle-modal",
@@ -17,7 +17,7 @@
     "electron",
     "chrome extension"
   ],
-  "author": "Yoon HyungJun <y37653@gmail.com>",
+  "author": "Yun HyeongJun <y37653@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -34,6 +34,6 @@
     "modalManager.js"
   ],
   "dependencies": {
-    "zindex-maximumvalue-manager": "1.0.2"
+    "zindex-maximumvalue-manager": "1.0.5"
   }
 }

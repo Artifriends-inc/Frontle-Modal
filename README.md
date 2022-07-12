@@ -2,25 +2,27 @@
 
 Modal UI in Frontle
 
-
-
  [![NPM Version][npm-version-image]][npm-url]
 
  [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
 
  [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
 
-```javascript
-<style>
-  .testModalContents{
-      font-size: 16px;
-  }
-  .testModalContents1{
-      color: black;
-  }
-</style>
+![화면-기록-2022-07-12-오후-3.40.17](https://user-images.githubusercontent.com/49587288/178426815-c3584419-1c86-4b36-aa1f-dc28f6ffc3b0.gif)
 
-let modal = new Modal(this.handler, `
+```javascript
+// at css file
+.testModalContents{
+    font-size: 16px;
+}
+.testModalContents1{
+    color: black;
+}
+
+// at js file
+import {Modal} from "../../frontle/browser_modules/frontle-modal/modal.js";
+
+let modal = new Modal(`
     <div>this is a modal<div>
     <button id="modalCloseButton">this is a close button</button>
 `);
@@ -39,22 +41,22 @@ modal.open();
 
 ## Installation
 
-Installation is done using the
+**How to install from Frontle**
 
 ```shell
-$ frontle install-original frontle-modal
+$ frontle install frontle-modal
 ```
 
 
 
 ## Function
 
-#### new modal(handler, html)
+#### new modal(html)
 
 Create a modal object
 
 ```javascript
-let modal = new Modal(this.handler, `
+let modal = new Modal(`
     <div>this is a modal<div>
     <button id="modalCloseButton">this is a close button</button>
 `);
@@ -67,16 +69,16 @@ let modal = new Modal(this.handler, `
 Set the css class of a modal
 
 ```javascript
-modal.modalClass = 'classname';
-modal.modalContentsClass = 'classname';
-modal.modalBackgroundClass = 'classname';
+modal.modalClass = 'class name';
+modal.modalContentsClass = 'class name';
+modal.modalBackgroundClass = 'class name';
 ```
 
 
 
 #### modal.transitionSeconds
 
-Setting the Modal Animation Time
+Set the Modal Animation Time
 
 ```javascript
 modal.transitionSeconds = '0.3';
@@ -96,7 +98,7 @@ modal.backgroundClickExit = 'true';
 
 #### modal.awake
 
-Lifecycle running before the modal is rendered
+This lifecycle runs before modal rendering.
 
 ```javascript
 modal.awake () => { console.log('before rendering') }
@@ -106,7 +108,7 @@ modal.awake () => { console.log('before rendering') }
 
 #### modal.start
 
-Lifecycle that runs after the modal is rendered
+This lifecycle runs after modal rendered
 
 ```javascript
 modal.start () => { console.log('after rendering') }
@@ -116,7 +118,7 @@ modal.start () => { console.log('after rendering') }
 
 #### modal.end
 
-Lifecycle running before modal termination
+This lifecycle runs before modal termination
 
 ```javascript
 modal.end () => { console.log('end') }

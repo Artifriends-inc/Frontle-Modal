@@ -5,9 +5,9 @@ import {ModalManager} from "./modalManager.js";
 export class Modal {
     modalManager = null;
     modalId = null;
+    handler = null;
 
     // required options
-    handler = null;
     html = ``;
 
     // custom options
@@ -21,14 +21,13 @@ export class Modal {
     start = () => {};
     end = () => {};
 
-    constructor(handler, html) {
-        if(handler === null) throw 'handler must be entered';
+    constructor(html) {
         if(html === null) throw 'html must be entered';
 
-        this.handler = handler;
         this.html = html;
 
-        this.modalManager = ModalManager.getInstance(this.handler);
+        this.handler = document.querySelector('.rootPage').id;
+        this.modalManager = ModalManager.getInstance();
     }
 
     open() {
