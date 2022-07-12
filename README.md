@@ -69,9 +69,9 @@ let modal = new Modal(`
 Set the css class of a modal
 
 ```javascript
-modal.modalClass = 'class name';
-modal.modalContentsClass = 'class name';
-modal.modalBackgroundClass = 'class name';
+modal.modalClass = 'css_class_name';
+modal.modalContentsClass = 'css_class_name';
+modal.modalBackgroundClass = 'css_class_name';
 ```
 
 
