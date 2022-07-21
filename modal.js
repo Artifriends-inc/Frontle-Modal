@@ -27,7 +27,7 @@ export class Modal {
         this.html = html;
 
         this.handler = document.querySelector('.rootPage').id;
-        this.modalManager = ModalManager.getInstance();
+        this.modalManager = new ModalManager();
     }
 
     open() {

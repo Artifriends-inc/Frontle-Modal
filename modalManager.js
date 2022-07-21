@@ -3,18 +3,17 @@
 import {zIndexManager} from "../zindex-maximumvalue-manager/zIndexManager.js";
 
 export class ModalManager {
-    static instance = null;
-    static getInstance() {
+    static _instance = null;
+    constructor() {
         const handler = document.querySelector('.rootPage').id;
 
-        if (this.instance === null) {
-            this.instance = new this();
-            this.instance.init(handler);
-        } else {
-            if(this.instance.handler !== handler) this.instance.init(handler);
+        if (ModalManager._instance) {
+            if(ModalManager._instance.handler !== handler) ModalManager._instance.init(handler);
+            return ModalManager._instance;
         }
 
-        return this.instance;
+        this.init(handler);
+        ModalManager._instance = this;
     }
 
     zIndexManager = null;
@@ -24,10 +23,8 @@ export class ModalManager {
     openingStatus = {};
     closingStatus = {};
 
-    constructor() {}
-
     init(handler) {
-        this.zIndexManager = zIndexManager.getInstance();
+        this.zIndexManager = new zIndexManager();
         this.handler = handler;
         this.modalCount = 0;
         this.openedStatus = {};
