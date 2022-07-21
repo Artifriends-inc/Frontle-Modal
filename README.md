@@ -20,7 +20,7 @@ Modal UI in Frontle
 }
 
 // at js file
-import {Modal} from "../../frontle/browser_modules/frontle-modal/modal.js";
+import {Modal} from "../../browser_modules/frontle-modal/modal.js";
 
 let modal = new Modal(`
     <div>this is a modal<div>

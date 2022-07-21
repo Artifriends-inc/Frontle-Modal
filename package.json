@@ -1,6 +1,6 @@
 {
   "name": "frontle-modal",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Modal UI in Frontle",
   "keywords": [
     "frontle",
@@ -31,9 +31,8 @@
     "LICENSE",
     "README.md",
     "modal.js",
-    "modalManager.js"
+    "modalManager.js",
+    "util/"
   ],
-  "dependencies": {
-    "zindex-maximumvalue-manager": "2.0.0"
-  }
+  "dependencies": {}
 }
